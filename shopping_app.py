@@ -1,3 +1,6 @@
+# A shopping application that allows users to register and place orders from a list of available items.
+print("Welcome to the Shopping App!")
+
 username = input("Enter your username: ")
 while len(username) < 5:
     print("Username must be at least 5 characters long.")
@@ -23,6 +26,7 @@ for item in items_available:
     print(f"Items available - {item}")
 
 order_list = []
+not_available = []
 
 item_requested = input("Enter the items you want to order (q to place order): ")
 
@@ -32,12 +36,14 @@ while item_requested != 'q':
         order_list.append(item_requested)
     else:
         print("Sorry, we don't have that item. Please choose from the available items.")
+        not_available.append(item_requested)
     
     item_requested = input("Enter the items you want to order (q to place order): ")
 
 print("Placing your order. Thank you!")
 if order_list:
     print(f"Your order: {', '.join(order_list)}")
+    print(f"Reporting unavailable items: {', '.join(not_available)}")
 else:
     print("No items ordered.")
 

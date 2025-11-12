@@ -1,3 +1,5 @@
+# A simple calculator that performs basic arithmetic operations including addition, subtraction, multiplication, division, exponentiation, and modulus.
+
 print("Welcome to the Calculator!")
 
 def add(a, b):
